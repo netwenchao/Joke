@@ -1,0 +1,57 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/contentContainer"
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:layout_alignParentTop="true"
+	    android:orientation="vertical" >
+	   <RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:paddingLeft="4sp"
+		    android:paddingRight="4sp"
+		    android:paddingTop="8sp"
+		    android:paddingBottom="8sp"
+			android:background="@drawable/nav_bg" 
+		>
+			<TextView
+			    android:layout_centerVertical="true"
+			    android:id="@+id/txtTitle"
+			    android:layout_height="wrap_content"
+			    android:layout_width="wrap_content"			    
+			    style="@style/header_text"			    
+			    android:text="@string/book_title"			    
+		        >	    
+			</TextView>			
+
+			<Spinner
+			    android:id="@+id/dplCategoryOfJokes"			    
+			    android:layout_width="wrap_content"			    
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true" />
+
+		</RelativeLayout>	
+	 	<ListView
+	 	    android:id="@+id/jokeList"
+		    android:layout_height="wrap_content"
+		    android:layout_width="fill_parent"
+		    android:layout_weight="1"
+		    android:background="#FFDDDDDD"
+		    android:padding="8sp"
+		    android:divider="#FFDDDDDD"
+		    android:dividerHeight="16sp"
+	 	    >	 	    
+	 	</ListView>
+	 	<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+	 	    <TextView
+	 	        android:layout_width="fill_parent"
+	 	        android:layout_height="wrap_content"
+	 	        android:text="1 to 25" />
+	 	    
+	 	    <ProgressBar
+	 	        android:layout_width="fill_parent"
+	 	        style="?android:attr/progressBarStyleHorizontal"
+	 	        android:layout_height="wrap_content" />
+
+	 	</LinearLayout>
+</LinearLayout>	

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8sp"
+    android:background="@drawable/item_joke_bg"
+    android:orientation="horizontal" >
+    <LinearLayout 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:orientation="vertical" 
+        android:padding="4sp"
+        android:gravity="right"
+        android:layout_gravity="right"
+        android:background="@drawable/item_main_date_bg">
+        <TextView 
+            android:id="@+id/item_joke_day"
+        	android:layout_width="wrap_content"
+        	android:text=" 11"
+        	android:textColor="#FFFFFFFF"
+        	android:textSize="24sp"
+        	android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/item_joke_month" 
+        	android:layout_width="wrap_content"
+        	android:text="11月"
+        	android:textColor="#FFFFFFFF"
+        	android:textSize="16sp"
+        	android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:background="#FF1CADE2" android:layout_width="1sp" android:layout_height="match_parent" android:orientation="horizontal" ></LinearLayout>
+    <LinearLayout android:orientation="vertical"
+        android:paddingLeft="4sp"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:id="@+id/item_joke_title" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Title:"
+                android:layout_alignParentLeft="true" />
+        	<TextView android:id="@+id/item_joke_from" 
+        	    android:layout_width="wrap_content" 
+        	    android:layout_height="wrap_content"
+        	    android:text="来自:"
+        	    android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <TextView android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="Contents"
+            android:id="@+id/item_joke_content"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <CheckBox android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:background="@drawable/chk_fav"
+                android:button="@null"
+                android:id="@+id/item_joke_isFav"
+                android:layout_alignParentLeft="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

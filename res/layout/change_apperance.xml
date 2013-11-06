@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8sp"
+    android:background="#666666"
+    android:gravity="center"
+    android:orientation="vertical">
+    <TextView 
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:layout_height="wrap_content"
+        android:text="@string/preview"
+        />
+    <View
+        android:layout_height="2sp"
+        android:layout_width="fill_parent"
+        android:background="#FFCCFFCC"
+        />
+    <TextView 
+        android:layout_height="100sp"
+        android:layout_width="fill_parent"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:padding="4sp"
+        android:layout_margin="8sp"
+        android:textSize="10sp"
+        android:id="@+id/prevText"
+        android:text="@string/previewText"
+        />
+    <View
+        android:layout_height="2sp"
+        android:layout_width="fill_parent"
+        android:background="#FFCCFFCC"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content" >
+
+        <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_height="wrap_content"
+	        android:textColor="#FFFFFF"
+	        android:text="@string/changeSize"
+	        android:textSize="16sp"
+	        />
+        <TextView 
+            android:layout_width="wrap_content"
+	        android:layout_gravity="center"
+	        android:layout_height="wrap_content"
+	        android:textColor="#FFFFFF"
+	        android:id="@+id/fontSize"
+	        android:text="16"
+            />
+    </LinearLayout>
+    <SeekBar
+        android:id="@+id/sbFontSize"
+        android:layout_width="match_parent"
+        android:max="34"
+        android:progress="1"
+        android:layout_height="wrap_content" />
+
+    <ZoomControls
+        android:id="@+id/zoomFontSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+        android:id="@+id/btnSettingSure"
+        android:layout_marginRight="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnSure" />
+
+	    <Button
+	        android:id="@+id/btnSettingCancel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/btnCancel"  />
+    </LinearLayout>
+	
+</LinearLayout>

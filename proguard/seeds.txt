@@ -1,0 +1,210 @@
+android.support.v4.app.BackStackState
+android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.Fragment$SavedState
+android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentActivity
+android.support.v4.app.FragmentManagerState
+android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentState
+android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentTabHost
+android.support.v4.app.FragmentTabHost: FragmentTabHost(android.content.Context,android.util.AttributeSet)
+android.support.v4.app.FragmentTabHost$SavedState
+android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+android.support.v4.view.PagerTabStrip
+android.support.v4.view.PagerTabStrip: PagerTabStrip(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.PagerTitleStrip
+android.support.v4.view.PagerTitleStrip: PagerTitleStrip(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager
+android.support.v4.view.ViewPager: ViewPager(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager$LayoutParams
+android.support.v4.view.ViewPager$LayoutParams: ViewPager$LayoutParams(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager$SavedState
+android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
+com.baidu.mobads.AdSettings
+com.baidu.mobads.AdSettings: AdSettings()
+com.baidu.mobads.AdSettings: org.json.JSONObject getAttr()
+com.baidu.mobads.AdSettings: void setKey(java.lang.String[])
+com.baidu.mobads.AdSettings: void setKey(java.util.List)
+com.baidu.mobads.AdSettings: void setSex(com.baidu.mobads.AdSettings$Sex)
+com.baidu.mobads.AdSettings: void setBirthday(java.util.Calendar)
+com.baidu.mobads.AdSettings: void setCity(java.lang.String)
+com.baidu.mobads.AdSettings: void setZip(java.lang.String)
+com.baidu.mobads.AdSettings: void setJob(java.lang.String)
+com.baidu.mobads.AdSettings: void setEducation(com.baidu.mobads.AdSettings$Education)
+com.baidu.mobads.AdSettings: void setSalary(com.baidu.mobads.AdSettings$Salary)
+com.baidu.mobads.AdSettings: void setHob(java.lang.String[])
+com.baidu.mobads.AdSettings: void setHob(java.util.List)
+com.baidu.mobads.AdSettings: void setUserAttr(java.lang.String,java.lang.String)
+com.baidu.mobads.AdSettings$Education
+com.baidu.mobads.AdSettings$Education: com.baidu.mobads.AdSettings$Education PRIMARY
+com.baidu.mobads.AdSettings$Education: com.baidu.mobads.AdSettings$Education JUNIOR
+com.baidu.mobads.AdSettings$Education: com.baidu.mobads.AdSettings$Education SENIOR
+com.baidu.mobads.AdSettings$Education: com.baidu.mobads.AdSettings$Education SPECIALTY
+com.baidu.mobads.AdSettings$Education: com.baidu.mobads.AdSettings$Education BACHELOR
+com.baidu.mobads.AdSettings$Education: com.baidu.mobads.AdSettings$Education MASTER
+com.baidu.mobads.AdSettings$Education: com.baidu.mobads.AdSettings$Education DOCTOR
+com.baidu.mobads.AdSettings$Education: com.baidu.mobads.AdSettings$Education[] values()
+com.baidu.mobads.AdSettings$Education: com.baidu.mobads.AdSettings$Education valueOf(java.lang.String)
+com.baidu.mobads.AdSettings$Education: int getValue()
+com.baidu.mobads.AdSettings$Salary
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F0T1k
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F1kT2k
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F2kT3k
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F3kT4k
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F4kT5k
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F5kT6k
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F6kT7k
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F7kT8k
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F8kT9k
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F9kT10k
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F10kT15k
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F15kT20k
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary F20
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary[] values()
+com.baidu.mobads.AdSettings$Salary: com.baidu.mobads.AdSettings$Salary valueOf(java.lang.String)
+com.baidu.mobads.AdSettings$Salary: int getValue()
+com.baidu.mobads.AdSettings$Sex
+com.baidu.mobads.AdSettings$Sex: com.baidu.mobads.AdSettings$Sex MALE
+com.baidu.mobads.AdSettings$Sex: com.baidu.mobads.AdSettings$Sex FEMALE
+com.baidu.mobads.AdSettings$Sex: com.baidu.mobads.AdSettings$Sex[] values()
+com.baidu.mobads.AdSettings$Sex: com.baidu.mobads.AdSettings$Sex valueOf(java.lang.String)
+com.baidu.mobads.AdSettings$Sex: int getValue()
+com.baidu.mobads.AdSize
+com.baidu.mobads.AdSize: com.baidu.mobads.AdSize Banner
+com.baidu.mobads.AdSize: com.baidu.mobads.AdSize Square
+com.baidu.mobads.AdSize: com.baidu.mobads.AdSize VideoInterstitial
+com.baidu.mobads.AdSize: com.baidu.mobads.AdSize VideoPause
+com.baidu.mobads.AdSize: com.baidu.mobads.AdSize VideoSwitch
+com.baidu.mobads.AdSize: com.baidu.mobads.AdSize[] values()
+com.baidu.mobads.AdSize: com.baidu.mobads.AdSize valueOf(java.lang.String)
+com.baidu.mobads.AdSize: int getValue()
+com.baidu.mobads.AdView
+com.baidu.mobads.AdView: java.lang.String P_VERSION
+com.baidu.mobads.AdView: AdView(android.content.Context)
+com.baidu.mobads.AdView: AdView(android.content.Context,com.baidu.mobads.AdSize,java.lang.String)
+com.baidu.mobads.AdView: AdView(android.content.Context,android.util.AttributeSet)
+com.baidu.mobads.AdView: void setListener(com.baidu.mobads.AdViewListener)
+com.baidu.mobads.AdView: void setAlpha(float)
+com.baidu.mobads.AdView: void setBackgroundColor(int)
+com.baidu.mobads.AdView: void setAppSid(android.content.Context,java.lang.String)
+com.baidu.mobads.AdView: void setAppSec(android.content.Context,java.lang.String)
+com.baidu.mobads.AdViewListener
+com.baidu.mobads.AdViewListener: void onAdReady(com.baidu.mobads.AdView)
+com.baidu.mobads.AdViewListener: void onAdShow(org.json.JSONObject)
+com.baidu.mobads.AdViewListener: void onAdClick(org.json.JSONObject)
+com.baidu.mobads.AdViewListener: void onAdFailed(java.lang.String)
+com.baidu.mobads.AdViewListener: void onAdSwitch()
+com.baidu.mobads.AdViewListener: void onVideoStart()
+com.baidu.mobads.AdViewListener: void onVideoFinish()
+com.baidu.mobads.AdViewListener: void onVideoError()
+com.baidu.mobads.AdViewListener: void onVideoClickClose()
+com.baidu.mobads.AdViewListener: void onVideoClickAd()
+com.baidu.mobads.AdViewListener: void onVideoClickReplay()
+com.baidu.mobads.AppActivity
+com.baidu.mobads.AppActivity: AppActivity()
+com.baidu.mobads.AppActivity: boolean dispatchKeyEvent(android.view.KeyEvent)
+com.baidu.mobads.AppActivity: boolean dispatchTouchEvent(android.view.MotionEvent)
+com.baidu.mobads.AppActivity: boolean dispatchTrackballEvent(android.view.MotionEvent)
+com.baidu.mobads.AppActivity: void finalize()
+com.baidu.mobads.AppActivity: void onActivityResult(int,int,android.content.Intent)
+com.baidu.mobads.AppActivity: void onApplyThemeResource(android.content.res.Resources$Theme,int,boolean)
+com.baidu.mobads.AppActivity: void onChildTitleChanged(android.app.Activity,java.lang.CharSequence)
+com.baidu.mobads.AppActivity: void onConfigurationChanged(android.content.res.Configuration)
+com.baidu.mobads.AppActivity: void onContentChanged()
+com.baidu.mobads.AppActivity: boolean onContextItemSelected(android.view.MenuItem)
+com.baidu.mobads.AppActivity: void onContextMenuClosed(android.view.Menu)
+com.baidu.mobads.AppActivity: void onCreate(android.os.Bundle)
+com.baidu.mobads.AppActivity: void onCreateContextMenu(android.view.ContextMenu,android.view.View,android.view.ContextMenu$ContextMenuInfo)
+com.baidu.mobads.AppActivity: java.lang.CharSequence onCreateDescription()
+com.baidu.mobads.AppActivity: android.app.Dialog onCreateDialog(int)
+com.baidu.mobads.AppActivity: boolean onCreateOptionsMenu(android.view.Menu)
+com.baidu.mobads.AppActivity: boolean onCreatePanelMenu(int,android.view.Menu)
+com.baidu.mobads.AppActivity: android.view.View onCreatePanelView(int)
+com.baidu.mobads.AppActivity: boolean onCreateThumbnail(android.graphics.Bitmap,android.graphics.Canvas)
+com.baidu.mobads.AppActivity: android.view.View onCreateView(java.lang.String,android.content.Context,android.util.AttributeSet)
+com.baidu.mobads.AppActivity: void onDestroy()
+com.baidu.mobads.AppActivity: boolean onKeyDown(int,android.view.KeyEvent)
+com.baidu.mobads.AppActivity: boolean onKeyMultiple(int,int,android.view.KeyEvent)
+com.baidu.mobads.AppActivity: boolean onKeyUp(int,android.view.KeyEvent)
+com.baidu.mobads.AppActivity: void onLowMemory()
+com.baidu.mobads.AppActivity: boolean onMenuItemSelected(int,android.view.MenuItem)
+com.baidu.mobads.AppActivity: boolean onMenuOpened(int,android.view.Menu)
+com.baidu.mobads.AppActivity: void onNewIntent(android.content.Intent)
+com.baidu.mobads.AppActivity: boolean onOptionsItemSelected(android.view.MenuItem)
+com.baidu.mobads.AppActivity: void onOptionsMenuClosed(android.view.Menu)
+com.baidu.mobads.AppActivity: void onPanelClosed(int,android.view.Menu)
+com.baidu.mobads.AppActivity: void onPause()
+com.baidu.mobads.AppActivity: void onPostCreate(android.os.Bundle)
+com.baidu.mobads.AppActivity: void onPostResume()
+com.baidu.mobads.AppActivity: void onPrepareDialog(int,android.app.Dialog)
+com.baidu.mobads.AppActivity: boolean onPrepareOptionsMenu(android.view.Menu)
+com.baidu.mobads.AppActivity: boolean onPreparePanel(int,android.view.View,android.view.Menu)
+com.baidu.mobads.AppActivity: void onRestart()
+com.baidu.mobads.AppActivity: void onRestoreInstanceState(android.os.Bundle)
+com.baidu.mobads.AppActivity: void onResume()
+com.baidu.mobads.AppActivity: java.lang.Object onRetainNonConfigurationInstance()
+com.baidu.mobads.AppActivity: void onSaveInstanceState(android.os.Bundle)
+com.baidu.mobads.AppActivity: boolean onSearchRequested()
+com.baidu.mobads.AppActivity: void onStart()
+com.baidu.mobads.AppActivity: void onStop()
+com.baidu.mobads.AppActivity: void onTitleChanged(java.lang.CharSequence,int)
+com.baidu.mobads.AppActivity: boolean onTouchEvent(android.view.MotionEvent)
+com.baidu.mobads.AppActivity: boolean onTrackballEvent(android.view.MotionEvent)
+com.baidu.mobads.AppActivity: void onUserInteraction()
+com.baidu.mobads.AppActivity: void onUserLeaveHint()
+com.baidu.mobads.AppActivity: void onWindowAttributesChanged(android.view.WindowManager$LayoutParams)
+com.baidu.mobads.AppActivity: void onWindowFocusChanged(boolean)
+com.baidu.mobads.MultiFuncService
+com.baidu.mobads.MultiFuncService: com.baidu.mobads.MultiFuncService getInstance(android.content.Context)
+com.baidu.mobads.MultiFuncService: void videoPreLoad(android.app.Activity,java.lang.String)
+com.baidu.mobads.MultiFuncService: void showInFloatView(android.app.Activity,com.baidu.mobads.AdView,android.graphics.Rect)
+com.baidu.mobads.MultiFuncService: void removeFromFloatView(android.app.Activity,com.baidu.mobads.AdView)
+com.baidu.mobads.a
+com.baidu.mobads.a: a(com.baidu.mobads.AdViewListener,com.baidu.mobads.AdView)
+com.baidu.mobads.a: boolean handleMessage(android.os.Message)
+com.baidu.mobads.a.a
+com.baidu.mobads.a.a: boolean a
+com.baidu.mobads.a.a: int b
+com.baidu.mobads.a.a: java.lang.String c
+com.baidu.mobads.a.a: java.lang.String d
+com.baidu.mobads.a.a: java.lang.String e
+com.baidu.mobads.a.a: java.lang.String f
+com.baidu.mobads.a.a: boolean g
+com.baidu.mobads.a.b
+com.baidu.mobads.a.b: b()
+com.baidu.mobads.a.b: boolean a(java.lang.String)
+com.baidu.mobads.a.b: boolean a(boolean,android.content.Context,java.net.URL,java.lang.String)
+com.baidu.mobads.a.b: boolean b(boolean,android.content.Context,java.net.URL,java.lang.String)
+com.baidu.mobads.a.b: java.net.HttpURLConnection a(android.content.Context,java.lang.String,int,int)
+com.baidu.mobads.a.b: java.lang.String a(android.content.Context,java.lang.String)
+com.baidu.mobads.a.b: java.lang.String b(android.content.Context,java.lang.String,int,int)
+com.baidu.mobads.a.b: java.lang.Class b(android.content.Context,java.lang.String)
+com.baidu.mobads.a.c
+com.baidu.mobads.a.c: void run()
+com.baidu.mobads.a.d
+com.baidu.mobads.a.d: void a()
+com.baidu.mobads.a.d: boolean a(java.lang.String,int)
+com.baidu.mobads.a.d: boolean a(int)
+com.baidu.mobads.a.d: int a(java.lang.Throwable)
+com.baidu.mobads.a.d: int a(java.lang.String,java.lang.Throwable)
+com.baidu.mobads.a.d: int a(java.lang.Object[])
+com.baidu.mobads.a.d: int a(java.lang.String)
+com.baidu.mobads.a.d: int b(java.lang.Throwable)
+com.baidu.mobads.a.d: int b(java.lang.String,java.lang.Throwable)
+com.baidu.mobads.a.d: int b(java.lang.String)
+com.baidu.mobads.a.d: int c(java.lang.String,java.lang.Throwable)
+com.baidu.mobads.a.d: int c(java.lang.Throwable)
+com.baidu.mobads.a.d: int b(java.lang.Object[])
+com.baidu.mobads.a.d: int c(java.lang.String)
+com.baidu.mobads.a.d: int d(java.lang.String)
+com.baidu.mobads.a.d: int c(java.lang.Object[])
+com.netwc.joke.JokeActivity
+com.netwc.joke.JokeActivity: JokeActivity()
+com.netwc.joke.JokeApp
+com.netwc.joke.JokeDetail
+com.netwc.joke.JokeDetail: JokeDetail()
+com.netwc.joke.JokeListActivity
+com.netwc.joke.JokeListActivity: JokeListActivity()

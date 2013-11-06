@@ -1,0 +1,43 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->         
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    <style name="header_text">
+        <item name="android:textColor">#FFFFFFFF</item>     
+        <item name="android:textStyle">bold</item>      
+        <item name="android:textSize">18sp</item>     
+    </style>
+    
+    <style name="dailyItemtitle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:padding">4sp</item>
+        <item name="android:textColor">#FF2CB4E7</item>
+    </style>
+    <style name="dailyItemContent">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">4sp</item>     
+    </style>
+    <style name="dailyItemDate">
+        <item name="android:gravity">right</item>
+        <item name="android:paddingTop">6sp</item>
+        <item name="android:textSize">12sp</item>        
+        <item name="android:textColor">#FF7B7B7B</item>
+    </style>
+
+</resources>

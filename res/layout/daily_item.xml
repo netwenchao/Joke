@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8sp"    
+    android:background="@drawable/daily_item_bg"    
+    android:orientation="vertical" >
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/dailyItemtitle"
+        android:text="www"
+        android:id="@+id/daily_item_jokeTitle"/>
+    <View
+        android:layout_height="2sp"
+        android:layout_width="fill_parent"
+        android:background="@drawable/spliter"
+        />
+    <TextView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      style="@style/dailyItemContent"
+      android:id="@+id/daily_item_jokeContent"      
+      >    
+    </TextView>
+  <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        android:id="@+id/daily_item_jokeUrl"/>
+    <TextView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/dailyItemDate"        
+        android:id="@+id/daily_item_jokeUpdate"/>
+</LinearLayout>
