@@ -6,8 +6,8 @@
 	<classpathentry kind="lib" path="libs/Tencent_MobWIN_SDK_2.0.jar"/>
 	<classpathentry kind="lib" path="libs/htmlparser.jar"/>
 	<classpathentry kind="lib" path="libs/Baidu_MobAds_SDK_Agg_3.2.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

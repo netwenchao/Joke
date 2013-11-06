@@ -10,27 +10,22 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true" >
         
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
-
+            >
+			<FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </FrameLayout>
+            
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
                 android:layout_height="wrap_content" >
-            </TabWidget>
-
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-            </FrameLayout>
-        </LinearLayout>
+            </TabWidget>            
+        </RelativeLayout>
     </TabHost>
-	<LinearLayout android:id="@+id/adContainer"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentBottom="true"
-	    android:layout_width="fill_parent">	    
-	</LinearLayout>>
 </RelativeLayout>

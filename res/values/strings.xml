@@ -15,6 +15,7 @@
 	<string name="action_changeappr">字体大小</string>
 	<string name="toRelace">松开更新</string>
 	<string name="tab_spec_daily">每日</string>
-	<string name="tab_spec_local">本地</string>
+	<string name="tab_spec_view">随便看看</string>
+	<string name="tab_spec_fav">已收藏的</string>
 	<string name="tab_spec_settings">设置</string>
 </resources>

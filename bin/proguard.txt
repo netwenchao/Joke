@@ -4,9 +4,21 @@
 # view res/layout/activity_daily_list.xml #generated:8
 -keep class com.netwc.LoadMoreDataListView { <init>(...); }
 
+# view AndroidManifest.xml #generated:52
+-keep class com.netwc.joke.JokeDailyActivity { <init>(...); }
+
 # view AndroidManifest.xml #generated:24
 -keep class com.netwc.joke.JokeDetail { <init>(...); }
 
+# view AndroidManifest.xml #generated:53
+-keep class com.netwc.joke.JokeFavListActivity { <init>(...); }
+
 # view AndroidManifest.xml #generated:50
 -keep class com.netwc.joke.JokeListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:54
+-keep class com.netwc.joke.JokeSettingsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:55
+-keep class com.netwc.joke.TabActivityMain { <init>(...); }
 

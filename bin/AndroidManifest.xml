@@ -47,7 +47,12 @@
 		<meta-data android:name="BaiduMobAd_APP_ID" android:value="d5f8fa1b" /> -->
 		<!-- 您从百度移动联盟网站获取的计费名 
 		<meta-data android:name="BaiduMobAd_APP_SEC" android:value="d5f8fa1b_cbc24570" />-->
-        <activity android:name="JokeListActivity">
+		<activity android:name="JokeListActivity">
+		</activity>
+		<activity android:name="JokeDailyActivity"></activity>
+		<activity android:name="JokeFavListActivity"></activity>
+		<activity android:name="JokeSettingsActivity"></activity>
+        <activity android:name="TabActivityMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

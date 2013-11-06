@@ -187,8 +187,9 @@ public class JokeListActivity extends Activity{
 					controls.item_joke_day.setText("1");
 					controls.item_joke_month.setText("11埖");
 					controls.item_joke_from.setText(cursor.getString(6));
-					controls.item_joke_content.setText(cursor.getString(3).replace(" 　","\n").replace("　　","\n"));	
-					controls.item_joke_isFav.setSelected(cursor.getShort(cursor.getColumnIndex("IsFavourite"))==1);
+					controls.item_joke_content.setText(cursor.getString(3).replace(" 　","\n").replace("　　","\n"));
+					short isFav=cursor.getShort(cursor.getColumnIndex("IsFavourite"));									
+					controls.item_joke_isFav.setChecked(isFav==1);
 					controls.item_joke_isFav.setTag(cursor.getInt(0));
 					controls.item_joke_isFav.setOnCheckedChangeListener(new OnCheckedChangeListener(){
 						@Override
@@ -196,6 +197,7 @@ public class JokeListActivity extends Activity{
 								boolean isChecked) {
 							// TODO Auto-generated method stub
 							int itemId= Integer.valueOf(buttonView.getTag().toString());
+							Log.v("Checked",String.valueOf(itemId));
 							dCenter.Add2Fav(itemId, isChecked);
 						}
 						
