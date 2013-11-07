@@ -1,6 +1,7 @@
 package com.netwc.joke;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
@@ -184,8 +185,14 @@ public class JokeListActivity extends Activity{
 				public void bindView(View view, Context context, Cursor cursor) {
 					JokeItemControl controls=GetJokeItemFromView(view);
 					controls.item_joke_title.setText(cursor.getString(1));
-					controls.item_joke_day.setText("1");
-					controls.item_joke_month.setText("11ÔÂ");
+					long dateMi=cursor.getLong(cursor.getColumnIndex("DateAdd"));
+					if(dateMi>0){
+						Calendar cal=Calendar.getInstance();
+						cal.setTimeInMillis(dateMi);
+						controls.item_joke_day.setText(String.valueOf(cal.getTime().getDate()));
+						controls.item_joke_month.setText(String.valueOf(cal.getTime().getMonth())+"ÔÂ");
+						controls.item_joke_time.setText(String.valueOf(cal.getTime().getHours()+":"+cal.getTime().getMinutes()));
+					}
 					controls.item_joke_from.setText(cursor.getString(6));
 					controls.item_joke_content.setText(cursor.getString(3).replace(" ¡¡","\n").replace("¡¡¡¡","\n"));
 					short isFav=cursor.getShort(cursor.getColumnIndex("IsFavourite"));									
@@ -220,6 +227,7 @@ public class JokeListActivity extends Activity{
 		rsltControl.item_joke_title=(TextView)v.findViewById(R.id.item_joke_title);
 		rsltControl.item_joke_content=(TextView)v.findViewById(R.id.item_joke_content);
 		rsltControl.item_joke_isFav=(CheckBox)v.findViewById(R.id.item_joke_isFav);
+		rsltControl.item_joke_time=(TextView)v.findViewById(R.id.item_joke_time);
 		return rsltControl;
 	}
 	
@@ -230,6 +238,7 @@ public class JokeListActivity extends Activity{
 		public TextView item_joke_from;
 		public TextView item_joke_content;		
 		public CheckBox item_joke_isFav;
+		public TextView item_joke_time;
 	}
 
 

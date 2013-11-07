@@ -102,13 +102,13 @@ public final class R {
     }
     public static final class id {
         public static final int ItemTitle=0x7f09000d;
-        public static final int JokeList=0x7f090025;
-        public static final int action_changeappr=0x7f090027;
-        public static final int action_settings=0x7f090028;
-        public static final int action_share=0x7f090026;
+        public static final int JokeList=0x7f090026;
+        public static final int action_changeappr=0x7f090028;
+        public static final int action_settings=0x7f090029;
+        public static final int action_share=0x7f090027;
         public static final int btnBack2ClassList=0x7f090007;
         public static final int btnMore=0x7f090018;
-        public static final int btnRefresh=0x7f090024;
+        public static final int btnRefresh=0x7f090025;
         public static final int btnSettingCancel=0x7f090013;
         public static final int btnSettingSure=0x7f090012;
         public static final int contentContainer=0x7f090000;
@@ -126,13 +126,14 @@ public final class R {
         public static final int item_joke_from=0x7f09001e;
         public static final int item_joke_isFav=0x7f090020;
         public static final int item_joke_month=0x7f09001c;
+        public static final int item_joke_time=0x7f090021;
         public static final int item_joke_title=0x7f09001d;
-        public static final int item_main_footer_page=0x7f090021;
+        public static final int item_main_footer_page=0x7f090022;
         public static final int jokeList=0x7f090003;
         public static final int listDaily=0x7f090004;
         public static final int prevText=0x7f09000e;
-        public static final int pull_to_refresh_header=0x7f090022;
-        public static final int pull_to_refresh_progress=0x7f090023;
+        public static final int pull_to_refresh_header=0x7f090023;
+        public static final int pull_to_refresh_progress=0x7f090024;
         public static final int sbFontSize=0x7f090010;
         public static final int tabhost=0x7f090006;
         public static final int tvItemTitle=0x7f09001a;

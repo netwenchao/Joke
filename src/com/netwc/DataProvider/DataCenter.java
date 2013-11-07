@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import com.netwc.Entities.CategoryInfo;
@@ -16,6 +17,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
+import android.text.style.UpdateAppearance;
 import android.util.Log;
 
 public class DataCenter {
@@ -89,6 +91,10 @@ public class DataCenter {
 		List<CategoryInfo> arr=new ArrayList<CategoryInfo>();
 		Cursor cur=null;
 		try {
+			/**/
+			Calendar calendar=Calendar.getInstance();		
+			calendar.add(Calendar.DATE,-30);			
+			Log.v("Time", String.valueOf(calendar.getTimeInMillis()));
 			cur=db.rawQuery("select * from categoryinfo",null);					
 			while(cur.moveToNext()){
 				CategoryInfo cate= new CategoryInfo();
