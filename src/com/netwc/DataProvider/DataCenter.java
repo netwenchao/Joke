@@ -60,9 +60,14 @@ public class DataCenter {
 	 * */
 	public boolean AddCategoryInfo(CategoryInfo category){
 		try {			
-			db.execSQL("insert into categoryinfo(ID,Name,PageUrl) values(?,?,?)", new Object[]{
-				category.ID,category.Name,category.PageUrl	
-			});
+			int id=GenerateCategoryId();
+			if(!CategoryExists(category.Name,category.PageUrl)){
+				db.execSQL("insert into categoryinfo(ID,Name,PageUrl) values(?,?,?)", new Object[]{
+						id,category.Name,category.PageUrl
+				});				
+			}else{
+				Log.v("DataCenter","Category with Name:"+category.Name+"  ,PageUrl:"+category.PageUrl+" exists.");
+			}			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -75,10 +80,14 @@ public class DataCenter {
 	 * Add Joke Info to database*/
 	public boolean AddJokeInfo(JokeInfo joke){
 		try {
-			String jokeInsetString="insert into JokeInfo(ID,Title,Url,Content,Category,SiteDate,DataFrom,DateAdd,IsDownLoad,IsNew,IsFavourite) values(?,?,?,?,?,?,?,?,?,?,?)";
-			db.execSQL(jokeInsetString,new Object[]{
-				joke.ID,joke.Title,joke.Url,joke.Content,joke.CategoryID,joke.SiteDate,joke.DataFrom,joke.DateAdd,joke.IsDownLoad?1:0,joke.IsNew?1:0,joke.IsFavourite?1:0
-			});				
+			if(!JokeExists(joke.Title,joke.Url)){
+				int id=GenerateJokeInfoId();
+				joke.DateAdd=System.currentTimeMillis();
+				String jokeInsetString="insert into JokeInfo(_ID,Title,Url,Content,Category,SiteDate,DataFrom,DateAdd,IsDownLoad,IsNew,IsFavourite) values(?,?,?,?,?,?,?,?,?,?,?)";
+				db.execSQL(jokeInsetString,new Object[]{
+					id,joke.Title,joke.Url,joke.Content,joke.CategoryID,joke.SiteDate,joke.DataFrom,joke.DateAdd,joke.IsDownLoad?1:0,joke.IsNew?1:0,joke.IsFavourite?1:0
+				});				
+			}
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -115,6 +124,34 @@ public class DataCenter {
 		return arr;
 	}
 	
+	public Boolean CategoryExists(String name,String PageUrl){
+		try {
+			Cursor cur=db.rawQuery("select id from categoryinfo where name=? and pageUrl=?",new String[]{name,PageUrl});
+			if(cur.getCount()>0){
+				cur.close();
+				return true;
+			}
+			cur.close();			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return false;
+	}
+	
+	public Boolean JokeExists(String name,String url){
+		try {
+			Cursor cur=db.rawQuery("select _id from jokeinfo where title=? and url=?",new String[]{name,url});
+			if(cur.getCount()>0){
+				cur.close();
+				return true;
+			}
+			cur.close();			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return false;
+	}
+	
 	/*
 	 * 
 	 * */
@@ -130,6 +167,17 @@ public class DataCenter {
 		}
 	}
 	
+	/*
+	 * */
+	public Cursor GetDailyJokeInfo(int pageSize,int pageIndex){
+		try {			
+			Calendar cal=Calendar.getInstance();			
+			return db.rawQuery("select * from jokeInfo limit "+pageSize+" offset "+pageSize*pageIndex+" order by dateadd desc",null);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+	}
 	/*
 	 * Add to or remove from fav
 	 * */
@@ -163,12 +211,13 @@ public class DataCenter {
 		}
 	}
 
+	
 	/*
 	 * Get ID
 	 * */
 	public int GenerateJokeInfoId(){
 		try {
-			Cursor cur=db.rawQuery("select max(id) from jokeInfo",null);
+			Cursor cur=db.rawQuery("select max(_id) from jokeInfo",null);
 			if(cur.getCount()>0){
 				cur.moveToFirst();
 				return cur.getInt(0)+1;

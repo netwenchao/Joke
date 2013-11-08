@@ -3,12 +3,15 @@ package com.netwc.DataProvider;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.htmlparser.Node;
 import org.htmlparser.nodes.TagNode;
 import org.htmlparser.tags.LinkTag;
 import org.htmlparser.util.NodeList;
+
+import com.netwc.Entities.CategoryInfo;
 import com.netwc.Entities.JokeInfo;
 import com.netwc.Entities.LinkNodeData;
 import com.netwc.Entities.NodeData;
@@ -16,9 +19,13 @@ import com.netwc.Entities.NodeData;
 import android.util.Log;
 
 public abstract class AbsJokeProvider {
-	public abstract ArrayList<JokeInfo> Execute();
+	public abstract ArrayList<JokeInfo> GetNewJokeInfos();
+	public abstract ArrayList<CategoryInfo> GetJokeCategorys();
+	public abstract JokeInfo GetJokeInfo(JokeInfo jokeInfo);
 	
-	public String UrlEncodeChina(String str){
+	protected List<CategoryInfo> Categorys; 
+	
+	protected String UrlEncodeChina(String str){
 		Pattern p=Pattern.compile("(?m)(?u)([\u4E00-\u9FA5]+)");
 		String outStr=str;
 		Matcher m=p.matcher(str);
@@ -30,17 +37,18 @@ public abstract class AbsJokeProvider {
 		return outStr;
 	}
 	
-	public String RemoveHtmlCode(String str){
+	protected String RemoveHtmlCode(String str){
 		return str.replaceAll("(?m)(?u)\\<br[ ]*(/)*\\>","\n").replaceAll("(?m)\\<[^<>]*\\>","")
 		.replaceAll("(?m)(?u)&amp;","&")
 		.replaceAll("(?m)(?u)&lt;","<")
 		.replaceAll("(?m)(?u)&gt;",">")
 		.replaceAll("(?m)(?u)&quot;","\"")
 		.replaceAll("(?m)(?u)&apos;","'")
+		.replaceAll("\\n","")
 		.replaceAll("(?m)(?u)&nbsp[ ]*;"," ");
 	}
 	
-	public LinkNodeData GetLinkNodeUrl(NodeList aTags,String baseUrl){
+	protected LinkNodeData GetLinkNodeUrl(NodeList aTags,String baseUrl){
 		if(aTags!=null && aTags.size()>0){			
 			return new LinkNodeData(
 						baseUrl+((LinkTag)aTags.elementAt(0)).getAttribute("href").toString(),
@@ -50,7 +58,7 @@ public abstract class AbsJokeProvider {
 		return null;
 	}
 
-	public NodeData GetNodeData(NodeList tags)
+	protected NodeData GetNodeData(NodeList tags)
 	{
 		if(tags!=null && tags.size()>0){
 			ArrayList<HashMap<String,String>> attributes=new ArrayList<HashMap<String,String>>();
@@ -61,7 +69,7 @@ public abstract class AbsJokeProvider {
 		return null;
 	}
 	
-	public NodeData GetNodeData(NodeList tags,String attrName)
+	protected NodeData GetNodeData(NodeList tags,String attrName)
 	{
 		if(tags!=null && tags.size()>0){
 			ArrayList<HashMap<String,String>> attributes=new ArrayList<HashMap<String,String>>();
@@ -78,7 +86,7 @@ public abstract class AbsJokeProvider {
 		return null;
 	}
 
-	public NodeData GetNodeData(Node tag,String attrName)
+	protected NodeData GetNodeData(Node tag,String attrName)
 	{		
 		ArrayList<HashMap<String,String>> attributes=new ArrayList<HashMap<String,String>>();
 		NodeData data=new NodeData();
@@ -92,7 +100,7 @@ public abstract class AbsJokeProvider {
 		return data;
 	}
 	
-	public NodeData GetNodeData(NodeList tags,String[] attrNames)
+	protected NodeData GetNodeData(NodeList tags,String[] attrNames)
 	{	
 		if(tags!=null && tags.size()>0){
 			ArrayList<HashMap<String,String>> attributes=new ArrayList<HashMap<String,String>>();

@@ -5,16 +5,6 @@
     android:background="#FFFFFFFF"
     android:orientation="vertical" >
 
-    <com.netwc.LoadMoreDataListView
-        android:id="@+id/listDaily"
-        android:layout_width="match_parent"
-        android:layout_margin="8sp"
-        android:divider="#FFFFFFFF"
-        android:background="#FFFFFFFF"         
-        android:dividerHeight="16sp"
-        android:layout_height="wrap_content" 
-        >
-        
-    </com.netwc.LoadMoreDataListView>   
+    <Button android:id="@+id/daily_button_TestDownLoad" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="DownLoadCategory"/>
 
 </LinearLayout>

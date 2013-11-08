@@ -14,20 +14,23 @@ import org.htmlparser.tags.Span;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 
+import com.netwc.Entities.CategoryInfo;
 import com.netwc.Entities.DataFrom;
 import com.netwc.Entities.JokeInfo;
 import android.util.Log;
 
 public class ProviderJokeJi extends AbsJokeProvider{
 	private final String siteUrl="http://www.jokeji.cn";
+	private String pageCoding="gb2312";
+	
 	@Override
-	public ArrayList<JokeInfo> Execute() {
+	public ArrayList<JokeInfo> GetNewJokeInfos() {
 		// TODO Auto-generated method stub
 		ArrayList<JokeInfo> jokes=new ArrayList<JokeInfo>();
 		Parser htmlParse;
 		try {
 			htmlParse = new Parser(siteUrl);
-			htmlParse.setEncoding("gb2312");
+			htmlParse.setEncoding(pageCoding);
 	
 			NodeList newsContainer=htmlParse.extractAllNodesThatMatch(new AndFilter(new TagNameFilter("div"),new HasAttributeFilter("class", "newcontent l_left")));
 			if(newsContainer!=null && newsContainer.size()>0){
@@ -97,6 +100,52 @@ public class ProviderJokeJi extends AbsJokeProvider{
 			return "";
 		}
 	}
-	
 
+	@Override
+	public ArrayList<CategoryInfo> GetJokeCategorys() {
+		// TODO Auto-generated method stub
+		ArrayList<CategoryInfo> jokes=new ArrayList<CategoryInfo>();
+		Parser htmlParse;
+		try {
+			htmlParse = new Parser(siteUrl);
+			htmlParse.setEncoding(pageCoding);
+			
+			NodeList categoryContainer=htmlParse.extractAllNodesThatMatch(new AndFilter(new TagNameFilter("div"),new HasAttributeFilter("class", "joketype l_left")));
+			if(categoryContainer!=null && categoryContainer.size()>0){
+				NodeList lisUl=categoryContainer.elementAt(0).getChildren().extractAllNodesThatMatch(new TagNameFilter("ul"));
+				Log.v("GetJokeCategorys","Ul Size:"+String.valueOf(lisUl.size()));
+				if(null!=lisUl && lisUl.size()>0){
+					NodeList lis=lisUl.elementAt(0).getChildren().extractAllNodesThatMatch(new TagNameFilter("li"));
+					Log.v("GetJokeCategorys","Li Size:"+String.valueOf(lis.size()));	
+					if(lis!=null && lis.size()>0){
+						Node liNode;
+						NodeList liSubNode;
+						for(int i=0;i<lis.size();i++){
+							liNode=lis.elementAt(i);
+							liSubNode=liNode.getChildren().extractAllNodesThatMatch(new TagNameFilter("a"));
+							if(liSubNode!=null && liSubNode.size()>0){
+								CategoryInfo catInfo=new CategoryInfo();
+								String catName=RemoveHtmlCode(((LinkTag)liSubNode.elementAt(0)).getLinkText());
+								catInfo.Name=catName.indexOf("(")>0?catName.substring(0,catName.indexOf("(")):catName;
+								String url= siteUrl+((TagNode)liSubNode.elementAt(0)).getAttribute("href");
+								catInfo.PageUrl=UrlEncodeChina(url);
+								jokes.add(catInfo);
+							}
+						}
+					}
+				}
+			}
+		}catch(ParserException e){
+			e.printStackTrace();
+		}
+		Log.v("GetJokeCategorys-JokeSize:",String.valueOf(jokes.size()));
+		return jokes;
+	}
+
+	@Override
+	public JokeInfo GetJokeInfo(JokeInfo jokeUrl) {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
 }

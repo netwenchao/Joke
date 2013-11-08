@@ -1,5 +1,6 @@
 package com.netwc.joke;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -52,7 +53,7 @@ import android.widget.Toast;
 
 public class JokeListActivity extends Activity{
     ListView mListView;
-    int pageSize=20;
+    int pageSize=100;
     int pageIdx=0;
     public boolean isLoading=false;
     public boolean isScrolliing=true;
@@ -61,6 +62,7 @@ public class JokeListActivity extends Activity{
     public View FooterView;    
     public Spinner  dplCategoryOfJokes;
     public List<CategoryInfo> categorys;
+    public SimpleDateFormat timeFormat=new SimpleDateFormat("HH:mm");
     
     public int CurrentCategory() {
     	CategoryInfo info= ((CategoryInfo)dplCategoryOfJokes.getSelectedItem());
@@ -92,7 +94,7 @@ public class JokeListActivity extends Activity{
 			if(isLoading) return;			
 			Log.v("OnScorll","FirstVisibleItem:"+firstVisibleItem);
 			Log.v("OnScorll","visibleItemCount:"+visibleItemCount);
-			if(firstVisibleItem+visibleItemCount==totalItemCount && totalItemCount>0){
+			if(firstVisibleItem+visibleItemCount==totalItemCount && totalItemCount>1){
 				FetchDataAsyncTask fc=new FetchDataAsyncTask();
 				fc.execute(new Integer[]{});
 			}
@@ -191,7 +193,7 @@ public class JokeListActivity extends Activity{
 						cal.setTimeInMillis(dateMi);
 						controls.item_joke_day.setText(String.valueOf(cal.getTime().getDate()));
 						controls.item_joke_month.setText(String.valueOf(cal.getTime().getMonth())+"ÔÂ");
-						controls.item_joke_time.setText(String.valueOf(cal.getTime().getHours()+":"+cal.getTime().getMinutes()));
+						controls.item_joke_time.setText(timeFormat.format(cal.getTime()));
 					}
 					controls.item_joke_from.setText(cursor.getString(6));
 					controls.item_joke_content.setText(cursor.getString(3).replace(" ¡¡","\n").replace("¡¡¡¡","\n"));

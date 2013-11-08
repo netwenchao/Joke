@@ -54,6 +54,8 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
             android:layout_height="wrap_content" >
             <CheckBox android:layout_width="wrap_content" 
                 android:layout_height="wrap_content" 
@@ -61,6 +63,8 @@
                 android:button="@null"
                 android:id="@+id/item_joke_isFav"
                 android:layout_alignParentLeft="true"/>
+            <ImageButton android:id="@+id/item_joke_share" android:background="@drawable/share_button"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/item_joke_isFav"/>
             <TextView android:id="@+id/item_joke_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true"/>
         </RelativeLayout>
     </LinearLayout>

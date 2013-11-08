@@ -10,6 +10,7 @@ import org.htmlparser.filters.TagNameFilter;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 
+import com.netwc.Entities.CategoryInfo;
 import com.netwc.Entities.DataFrom;
 import com.netwc.Entities.JokeInfo;
 import com.netwc.Entities.LinkNodeData;
@@ -18,7 +19,7 @@ import com.netwc.Entities.NodeData;
 public class ProviderQiuShi extends AbsJokeProvider{
 	private final String siteUrl="http://www.qiushibaike.com";	
 	@Override
-	public ArrayList<JokeInfo> Execute() {
+	public ArrayList<JokeInfo> GetNewJokeInfos() {
 		// TODO Auto-generated method stub
 		ArrayList<JokeInfo> jokes=new ArrayList<JokeInfo>();
 		Parser htmlParse;
@@ -77,5 +78,16 @@ public class ProviderQiuShi extends AbsJokeProvider{
 			e.printStackTrace();
 		}			
 		return jokes;
+	}
+	
+	@Override
+	public ArrayList<CategoryInfo> GetJokeCategorys() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public JokeInfo GetJokeInfo(JokeInfo jokeInfo) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

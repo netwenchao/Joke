@@ -1,9 +1,6 @@
 # view AndroidManifest.xml #generated:26
 -keep class com.google.ads.AdActivity { <init>(...); }
 
-# view res/layout/activity_daily_list.xml #generated:8
--keep class com.netwc.LoadMoreDataListView { <init>(...); }
-
 # view AndroidManifest.xml #generated:52
 -keep class com.netwc.joke.JokeDailyActivity { <init>(...); }
 
